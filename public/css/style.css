@@ -1,0 +1,139 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+}
+ 
+ header {
+    background-color: #333;
+    color: #fff;
+    height: 80px; /* Altura fija */
+    display: flex; /* Para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    padding: 0 1rem; /* Espaciado horizontal */
+}
+
+
+ 
+ header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+ }
+ 
+ footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+ 
+/* Contenido principal */
+main {
+    flex: 1; /* Toma el espacio restante para empujar el footer hacia abajo */
+    padding: 2rem; /* Espaciado interno opcional */
+}
+ 
+ /* Logo responsivo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+   /* align-items: center; /* Centra verticalmente */
+    padding: 0.5rem;     /* Espaciado alrededor del logo */
+}
+
+.logo {
+    max-width: 150px;   /* Tamaño máximo del logo */
+    height: auto;       /* Mantiene la proporción del logo */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100px; /* Tamaño reducido en pantallas pequeñas */
+    }
+}
+
+
+/* Estilos del contenedor del encabezado */
+header {
+    background-color: #333; /* Color de fondo */
+    color: #fff;           /* Color del texto */
+    padding: 1rem 2rem;    /* Espaciado interno */
+}
+
+/* Contenedor principal del menú y logo */
+nav {
+    display: flex;          /* Flexbox para alineación horizontal */
+    align-items: center;    /* Alinea verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre logo y menú */
+}
+
+/* Estilo del logo */
+.logo-container {
+    flex-shrink: 0;         /* Evita que el logo se reduzca */
+}
+
+.logo {
+    max-width: 200px;       /* Tamaño máximo del logo */
+    height: auto;           /* Mantiene proporciones */
+}
+
+/* Estilo de la lista del menú */
+nav ul {
+    list-style: none;       /* Elimina los puntos de la lista */
+    display: flex;          /* Flexbox para el menú */
+    gap: 1.5rem;            /* Espaciado entre los elementos del menú */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;            /* Color de los enlaces */
+    text-decoration: none;  /* Elimina el subrayado */
+    font-weight: bold;      /* Hace el texto más grueso */
+    transition: color 0.3s; /* Animación en el hover */
+}
+
+nav ul li a:hover {
+    color: #00bcd4;         /* Cambia el color al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center;    /* Centra el contenido */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menú en columna */
+        gap: 1rem;              /* Espaciado entre los elementos */
+    }
+
+    .logo {
+        max-width: 80px;        /* Tamaño más pequeño para el logo */
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem; /* Aumenta el padding en dispositivos pequeños */
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    }
+}
+
