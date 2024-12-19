@@ -150,11 +150,9 @@ nav ul li a:hover {
     nav ul li a {
         font-size: 0.8rem; /* Reducir el tamaño de texto en pantallas pequeñas */
     }
-}
-@media (max-width: 768px) {
+    
     footer {
         padding: 1.5rem; /* Aumenta el padding en dispositivos pequeños */
         font-size: 0.9rem; /* Reduce el tamaño de la fuente */
     }
 }
-
