@@ -130,36 +130,37 @@ nav ul li a:hover {
 
 @media (max-width: 480px) { /* Para pantallas muy pequeñas */
     header {
+        flex-direction: row; /* Mantener elementos alineados horizontalmente */
+        justify-content: space-between; /* Distribuir espacio entre los elementos */
         align-items: center;
-        height: auto; /* Ajuste para pantallas pequeñas */
-        padding: 1rem; /* Ajustar espaciado */
+        font-size: 0.8rem; /* Reducir tamaño de fuente */
     }
 
     nav ul {
-        justify-content: space-between; /* Mantener los elementos del menú en línea */
+        flex-direction: row; /* Menú horizontal */
         gap: 0.5rem; /* Espaciado menor entre los elementos */
-        text-align: center;
     }
 
     .logo {
-        max-width: 80px; /* Reduce aún más el tamaño del logo */
+        max-width: 80px; /* Reduce el tamaño del logo */
     }
 
     footer {
-        font-size: 0.8rem; /* Ajusta el tamaño del texto del footer */
-        padding: 1rem; /* Espaciado más pequeño */
+        font-size: 0.7rem; /* Ajusta el tamaño del texto del footer */
+        padding: 0.5rem; /* Espaciado más pequeño */
     }
 }
 
 @media (max-width: 768px) {
     main {
         padding: 1rem; /* Reduce el espacio interno */
+        font-size: 0.9rem; /* Ajuste global del texto */
     }
 }
 
 @media (max-width: 480px) {
     main {
         padding: 0.5rem; /* Ajuste aún más reducido para pantallas pequeñas */
+        font-size: 0.8rem; /* Ajustar tamaño de texto */
     }
 }
-
