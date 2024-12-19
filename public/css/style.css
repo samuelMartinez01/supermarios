@@ -112,7 +112,7 @@ footer {
 @media (max-width: 480px) { /* Para pantallas pequeñas */
     header {
         flex-direction: row; /* Mantener elementos alineados horizontalmente */
-        font-size: 0.8rem; /* Reducir tamaño de fuente */
+        font-size: 0.7rem; /* Reducir tamaño de fuente */
         padding: 0.5rem;
     }
 
@@ -122,7 +122,7 @@ footer {
     }
 
     .logo {
-        max-width: 80px; /* Tamaño reducido en pantallas pequeñas */
+        max-width: 70px; /* Tamaño reducido en pantallas pequeñas */
     }
 
     footer {
