@@ -1,40 +1,141 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Mario's</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Super Mario's</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
 <body>
-    
-    <!-- Aquí va el contenido del header (puedes agregarlo manualmente) -->
+    <section>
+        <h1>v2.0</h1>
+    </section>
     <header>
-                    <div class="logo-container">
-                        <img class="logo" src="images/logo.png" alt="Logo Super Mario's">
-                    </div>
+        <div class="logo-container">
+            <img class="logo" src="images/logo.png" alt="Logo Super Mario's">
+        </div>
         <nav>
-            <!-- Menú de navegación -->
-            <ul>
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
+            <a href="" class="active">Home</a>
+            <a href="">About</a>
+            <a href="">Portfolio</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
         </nav>
-    </header>
-    
-    <main>
-        <section id="hero">
-            <h1>Bienvenido a superMario's</h1>
-            <p class="alert">En desarrollo</p>
-        </section>
-    </main>
 
-    <!-- Aquí va el contenido del footer (puedes agregarlo manualmente) -->
-    <footer>
+    </header>
+
+
+    <div class="carousel">
+
+        <div class="list">
+
+            <div class="item" style="background-image: url(images/img1.jpg);">
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">EAGLE</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(images/img2.jpg);">
+                
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">OWL</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(images/img3.jpg);">
+
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">CROW</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+  
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(images/img4.jpg);">
+                
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">BUTTERFLY</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(images/img5.jpg);">
+                
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">OWL</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(images/img6.jpg);">
+                
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">EAGLE</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(images/img7.jpg);">
+                
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">KINGFISHER</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(images/img8.jpg);">
+                
+                <div class="content">
+                    <div class="title">SLIDER</div>
+                    <div class="name">PARROT</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+ 
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--next prev button-->
+        <div class="arrows">
+            <button class="prev"><</button>
+            <button class="next">></button>
+        </div>
+
+
+        <!-- time running -->
+        <div class="timeRunning"></div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+     <!-- Footer -->
+     <footer>
         <p>&copy; 2024 Super Mario's. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
