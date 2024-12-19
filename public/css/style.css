@@ -132,8 +132,11 @@ nav ul li a:hover {
     header {
         flex-direction: row; /* Mantener elementos alineados horizontalmente */
         justify-content: space-between; /* Distribuir espacio entre los elementos */
-        align-items: center;
         font-size: 0.8rem; /* Reducir tamaño de fuente */
+        width: 100vw; /* Usar todo el ancho de la pantalla */
+        margin: 0; /* Quitar márgenes */
+        padding: 0.5rem; /* Agregar un poco de espacio interno */
+        box-sizing: border-box; /* Incluir padding dentro del ancho total */
     }
 
     nav ul {
@@ -148,8 +151,13 @@ nav ul li a:hover {
     footer {
         font-size: 0.7rem; /* Ajusta el tamaño del texto del footer */
         padding: 0.5rem; /* Espaciado más pequeño */
+        width: 100vw; /* Usar todo el ancho de la pantalla */
+        margin: 0; /* Quitar márgenes */
+        box-sizing: border-box; /* Incluir padding dentro del ancho total */
+        text-align: center; /* Centrar el texto */
     }
 }
+
 
 @media (max-width: 768px) {
     main {
