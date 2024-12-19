@@ -114,10 +114,24 @@ nav ul li a:hover {
     color: #00bcd4;         /* Cambia el color al pasar el mouse */
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Estilo para el texto de la alerta */
+.alert {
+    background-color: #ff9800; /* Color de fondo naranja brillante */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 1rem;
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    animation: shake 0.5s ease-in-out infinite; /* Animación para hacer que "tiembla" */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+
+/* Ajustes para pantallas pequeñas (sin cambiar a lista vertical) */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Organiza el header verticalmente */
         height: auto; /* Ajuste para pantallas pequeñas */
         padding: 1rem; /* Ajustar espaciado */
     }
@@ -127,16 +141,17 @@ nav ul li a:hover {
     }
     
     nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem; /* Ajusta el espaciado entre los enlaces */
+        justify-content: space-between; /* Mantener los elementos del menú en línea */
     }
     
     nav ul li {
-        margin: 0.5rem;
+        margin: 0.3rem; /* Reducir el margen entre los elementos */
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem; /* Reducir el tamaño de texto en pantallas pequeñas */
     }
 }
-
 @media (max-width: 768px) {
     footer {
         padding: 1.5rem; /* Aumenta el padding en dispositivos pequeños */
