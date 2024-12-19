@@ -1,174 +1,137 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Altura mínima igual al 100% de la altura de la pantalla */
+    min-height: 100vh; /* Altura mínima igual al 100% de la pantalla */
     display: flex;
     flex-direction: column; /* Organiza elementos verticalmente */
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
 }
 
- header {
+/* Estilos del encabezado */
+header {
     background-color: #333;
     color: #fff;
     height: 80px; /* Altura fija */
     display: flex; /* Para centrar el contenido */
     align-items: center; /* Centra verticalmente */
-    padding: 0 1rem; /* Espaciado horizontal */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    padding: 1rem 2rem;
 }
 
+/* Logo responsivo */
+.logo-container {
+    flex-shrink: 0; /* Evita que el logo se reduzca */
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
 
- 
- header nav ul {
+.logo {
+    max-width: 150px;
+    height: auto; /* Mantiene proporción del logo */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Menú de navegación */
+nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    gap: 1.5rem; /* Espaciado entre elementos */
     margin: 0;
     padding: 0;
- }
- 
- header nav ul li a {
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
- }
- 
- footer {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Cambia color al pasar el mouse */
+}
+
+/* Estilos del contenido principal */
+main {
+    flex: 1; /* Toma el espacio restante para empujar el footer hacia abajo */
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+/* Estilos del pie de página */
+footer {
     text-align: center;
     background-color: #222;
     color: #fff;
     padding: 1rem;
     font-size: 0.9rem;
 }
- 
-/* Contenido principal */
-main {
-    flex: 1; /* Toma el espacio restante para empujar el footer hacia abajo */
-    padding: 2rem; /* Espaciado interno opcional */
-}
- 
- /* Logo responsivo */
-.logo-container {
-    display: flex;
-    justify-content: center;
-   /* align-items: center; /* Centra verticalmente */
-    padding: 0.5rem;     /* Espaciado alrededor del logo */
-}
 
-.logo {
-    max-width: 150px;   /* Tamaño máximo del logo */
-    height: auto;       /* Mantiene la proporción del logo */
-    transition: transform 0.3s ease; /* Animación al pasar el mouse */
-}
-
-.logo:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
-}
-
-/* Estilo para pantallas pequeñas */
-@media (max-width: 768px) {
-    .logo {
-        max-width: 100px; /* Tamaño reducido en pantallas pequeñas */
-    }
-}
-
-
-/* Estilos del contenedor del encabezado */
-header {
-    background-color: #333; /* Color de fondo */
-    color: #fff;           /* Color del texto */
-    padding: 1rem 2rem;    /* Espaciado interno */
-}
-
-/* Contenedor principal del menú y logo */
-nav {
-    display: flex;          /* Flexbox para alineación horizontal */
-    align-items: center;    /* Alinea verticalmente los elementos */
-    justify-content: space-between; /* Espacio entre logo y menú */
-}
-
-/* Estilo del logo */
-.logo-container {
-    flex-shrink: 0;         /* Evita que el logo se reduzca */
-}
-
-.logo {
-    max-width: 200px;       /* Tamaño máximo del logo */
-    height: auto;           /* Mantiene proporciones */
-}
-
-/* Estilo de la lista del menú */
-nav ul {
-    list-style: none;       /* Elimina los puntos de la lista */
-    display: flex;          /* Flexbox para el menú */
-    gap: 1.5rem;            /* Espaciado entre los elementos del menú */
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    color: #fff;            /* Color de los enlaces */
-    text-decoration: none;  /* Elimina el subrayado */
-    font-weight: bold;      /* Hace el texto más grueso */
-    transition: color 0.3s; /* Animación en el hover */
-}
-
-nav ul li a:hover {
-    color: #00bcd4;         /* Cambia el color al pasar el mouse */
-}
-
-/* Estilo para el texto de la alerta */
+/* Estilo para alertas */
 .alert {
-    background-color: #ffa600; /* Color de fondo naranja brillante */
-    color: rgb(0, 0, 0); /* Color del texto */
+    background-color: #ffa600;
+    color: rgb(0, 0, 0);
     padding: 1rem;
-    border-radius: 5px; /* Bordes redondeados */
-    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px;
+    font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
     margin-top: 20px;
-    animation: shake 0.5s ease-in-out infinite; /* Animación para hacer que "tiembla" */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    animation: shake 0.5s ease-in-out infinite; /* Animación de "temblor" */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 480px) { /* Para pantallas muy pequeñas */
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100px; /* Tamaño reducido en pantallas medianas */
+    }
+
+    nav ul {
+        gap: 1rem; /* Reduce el espacio entre elementos */
+    }
+
+    main {
+        padding: 1rem; /* Ajusta el espaciado */
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) { /* Para pantallas pequeñas */
     header {
         flex-direction: row; /* Mantener elementos alineados horizontalmente */
-        justify-content: space-between; /* Distribuir espacio entre los elementos */
         font-size: 0.8rem; /* Reducir tamaño de fuente */
-        width: 100vw; /* Usar todo el ancho de la pantalla */
-        margin: 0; /* Quitar márgenes */
-        padding: 0.5rem; /* Agregar un poco de espacio interno */
-        box-sizing: border-box; /* Incluir padding dentro del ancho total */
+        padding: 0.5rem;
     }
 
     nav ul {
         flex-direction: row; /* Menú horizontal */
-        gap: 0.5rem; /* Espaciado menor entre los elementos */
+        gap: 0.5rem; /* Espaciado menor */
     }
 
     .logo {
-        max-width: 80px; /* Reduce el tamaño del logo */
+        max-width: 80px; /* Tamaño reducido en pantallas pequeñas */
     }
 
     footer {
-        font-size: 0.7rem; /* Ajusta el tamaño del texto del footer */
-        padding: 0.5rem; /* Espaciado más pequeño */
-        width: 100vw; /* Usar todo el ancho de la pantalla */
-        margin: 0; /* Quitar márgenes */
-        box-sizing: border-box; /* Incluir padding dentro del ancho total */
-        text-align: center; /* Centrar el texto */
+        font-size: 0.7rem; /* Ajusta el tamaño del texto */
+        padding: 0.5rem;
     }
-}
 
-
-@media (max-width: 768px) {
     main {
-        padding: 1rem; /* Reduce el espacio interno */
-        font-size: 0.9rem; /* Ajuste global del texto */
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 0.5rem; /* Ajuste aún más reducido para pantallas pequeñas */
-        font-size: 0.8rem; /* Ajustar tamaño de texto */
+        padding: 0.5rem; /* Espaciado reducido */
+        font-size: 0.8rem;
     }
 }
