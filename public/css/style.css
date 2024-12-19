@@ -130,12 +130,13 @@ nav ul li a:hover {
 
 @media (max-width: 480px) { /* Para pantallas muy pequeñas */
     header {
-        flex-direction: column; /* Organizar elementos verticalmente */
         align-items: center;
+        height: auto; /* Ajuste para pantallas pequeñas */
+        padding: 1rem; /* Ajustar espaciado */
     }
 
     nav ul {
-        flex-direction: column; /* Menú vertical */
+        justify-content: space-between; /* Mantener los elementos del menú en línea */
         gap: 0.5rem; /* Espaciado menor entre los elementos */
         text-align: center;
     }
