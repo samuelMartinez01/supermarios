@@ -22,8 +22,6 @@
         </header>
         <!-- Menú lateral -->
         <aside id="sidebar" class="sidebar">
-          <button class="close-btn" id="closeSidebar">✖</button>
-          <h2>Menú</h2>
           <nav>
             <button onclick="changeScreen('Screen1')">Home</button>
             <button onclick="changeScreen('Screen2')">About</button>
@@ -140,38 +138,11 @@
             
             </div>
         </main>
-      
-        <script>
-          const menuToggle = document.getElementById("menuToggle");
-          const closeSidebar = document.getElementById("closeSidebar");
-          const sidebar = document.getElementById("sidebar");
-          const mainContent = document.getElementById("mainContent");
-      
-          // Abrir y cerrar el menú lateral
-          menuToggle.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-            mainContent.classList.toggle("collapsed");
-          });
-      
-          closeSidebar.addEventListener("click", () => {
-            sidebar.classList.remove("open");
-            mainContent.classList.add("collapsed");
-          });
-      
-          // Cambiar contenido de la pantalla
-          function changeScreen(screen) {
-            const mainContent = document.getElementById("mainContent");
-            mainContent.innerHTML = `<h2>${screen}</h2><p>Esta es la pantalla de ${screen}.</p>`;
-            sidebar.classList.remove("open");
-            mainContent.classList.add("collapsed");
-          }
-        </script>
+        <footer>
+            <p>&copy; 2024 Super Mario's. Todos los derechos reservados.</p>
+        </footer>
       </body>
 
 
     <script src="js/script.js"></script>
-     <!-- Footer -->
-     <footer>
-        <p>&copy; 2024 Super Mario's. Todos los derechos reservados.</p>
-    </footer>
 </html>

@@ -59,3 +59,30 @@ function showSlider(type) {
 
 // Start the initial animation 
 resetTimeAnimation()
+
+
+const menuToggle = document.getElementById("menuToggle");
+const closeSidebar = document.getElementById("closeSidebar");
+const sidebar = document.getElementById("sidebar");
+const mainContent = document.getElementById("mainContent");
+
+// Abrir y cerrar el menú lateral
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+  mainContent.classList.toggle("collapsed");
+});
+
+// Cambiar contenido de la pantalla
+function changeScreen(screen) {
+  const mainContent = document.getElementById("mainContent");
+
+  if (screen === 'Screen1') {
+    // Redirigir a index.html
+    window.location.href = 'index.html';
+    return;
+  } else {
+    mainContent.innerHTML = `<h2>${screen}</h2><p>Esta es la pantalla de ${screen}.</p>`;
+    sidebar.classList.remove("open");
+    mainContent.classList.add("collapsed");
+  }
+}
