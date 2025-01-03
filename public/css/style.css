@@ -97,9 +97,9 @@ footer {
     width: 180px;
     height: 250px;
     position: absolute;
-    top: 80%;
+    top: 70%;
     transform: translateY(-70%);
-    left: 70%;
+    left: 80%;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     background-position: 50% 50%;
@@ -145,7 +145,7 @@ footer {
 
 .list .item .content{
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 100px;
     transform: translateY(-50%);
     width: 400px;
@@ -246,7 +246,7 @@ footer {
 .arrows{
     position: absolute;
     top: 80%;
-    right: 52%;
+    right: 68%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
