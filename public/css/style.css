@@ -31,10 +31,13 @@
   }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #333;
   }
   
   .logo-container {
@@ -212,34 +215,6 @@ footer {
 
 
 
-/* Estilo para el botón de WhatsApp */
-.whatsapp-button {
-    position: fixed;  /* Fija el botón en la pantalla */
-    bottom: 20px;     /* Lo coloca 20px desde la parte inferior */
-    right: 20px;      /* Lo coloca 20px desde la parte derecha */
-    background-color: #25D366;  /* Color de fondo verde de WhatsApp */
-    padding: 10px 20px;  /* Espaciado interno */
-    border-radius: 50px;  /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra sutil */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    text-decoration: none;  /* Elimina el subrayado del enlace */
-    z-index: 1000;  /* Asegura que esté encima de otros elementos */
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E;  /* Color de fondo al pasar el mouse */
-}
-
-.whatsapp-button i {
-    margin-right: 10px;  /* Espaciado entre el icono y el texto */
-}
-
-
-
 
 /* next prev arrows */
 
@@ -353,6 +328,9 @@ footer {
   }
 
   /* Contenido principal */
+  main {
+    flex: 1;
+}
   .main-content {
     margin-top: 0px; /* Espacio para el header */
     margin-bottom: 0px; /* Espacio para el footer */
@@ -424,4 +402,163 @@ footer {
         font-size: 0.7rem; /* Ajusta el tamaño del texto */
         padding: 0.1rem;
     }
+}
+
+/* Ocultar inicialmente la sección */
+
+/* Estilizado general de la sección */
+.contacto {
+    padding: 40px;
+    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Asegura que el formulario esté centrado */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    height: 89vh; /* Hace que el contenedor ocupe el 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.contacto h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilizado del formulario */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#contactForm textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+#contactForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+.email-button button {
+    background-color: #333; /* Color rojo */
+    color: rgb(255, 255, 255); /* Texto blanco */
+    padding: 15px 32px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease; /* Animación suave en todas las propiedades */
+}
+
+.email-button button:hover {
+    background-color: #e60000; /* Color rojo oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Movimiento hacia arriba */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.email-button button:active {
+    transform: translateY(2px); /* Movimiento hacia abajo al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+}
+
+
+/* Contenedor de los botones alineados horizontalmente */
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    margin: 0px 0;
+    background-color: #333;
+}
+
+/* Estilo base para los botones */
+.facebook-button, .whatsapp-button, .tiktok-button {
+    padding: 4px 9px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del enlace dentro de cada botón */
+.facebook-link, .whatsapp-link, .tiktok-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo específico para cada botón */
+.facebook-button {
+    background-color: #3b5998;
+}
+
+.facebook-button:hover {
+    background-color: #2d4373;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.tiktok-button {
+    background-color: #010101; /* Color negro de TikTok */
+}
+
+.tiktok-button:hover {
+    background-color: #333333;
 }

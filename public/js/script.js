@@ -72,17 +72,23 @@ menuToggle.addEventListener("click", () => {
   mainContent.classList.toggle("collapsed");
 });
 
-// Cambiar contenido de la pantalla
-function changeScreen(screen) {
-  const mainContent = document.getElementById("mainContent");
 
-  if (screen === 'Screen1') {
-    // Redirigir a index.html
-    window.location.href = 'index.html';
-    return;
-  } else {
-    mainContent.innerHTML = `<h2>${screen}</h2><p>Esta es la pantalla de ${screen}.</p>`;
+document.addEventListener("DOMContentLoaded", () => {
+    // Mostrar Screen1 por defecto cuando la página se cargue
+    changeScreen('Screen1');
+});
+
+function changeScreen(screen) {
+    const screens = document.querySelectorAll("main > div");
+    console.log(screens); // Verifica qué elementos está seleccionando
+    screens.forEach((s) => s.classList.add("hidden"));
+
+    if (screen === 'Screen1') {
+        document.querySelector(".carousel").classList.remove("hidden");
+    } else if (screen === 'Screen2') {
+        document.querySelector("#Screen2").classList.remove("hidden");
+    }
+
     sidebar.classList.remove("open");
     mainContent.classList.add("collapsed");
-  }
 }
