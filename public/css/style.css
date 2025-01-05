@@ -7,13 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-  header {
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #222;
+    background-image: url("../images/image.png");
+
+    background-size: cover; /* Ajusta la imagen para que cubra todo el header */
+    background-position: center; /* Centra la imagen */
     color: white;
     display: flex;
     align-items: center;
@@ -21,6 +24,7 @@
     padding: 0 20px;
     z-index: 1000;
 }
+
 
   header button {
     background: none;
@@ -58,9 +62,6 @@ body {
     
 }
 
-
-
-
 .logo {
     max-width: 70px;
     height: auto; /* Mantiene proporción del logo */
@@ -76,7 +77,9 @@ body {
 
 footer {
     text-align: center;
-    background-color: #222;
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 1rem;
     font-size: 0.9rem;
@@ -230,27 +233,36 @@ footer {
     align-items: center;
 }
 
-.arrows button{
-    width: 50px;
-    height: 50px;
+.arrows button {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
     color: #fff;
-    border: none;
+    border: 2px solid transparent;
     outline: none;
-    font-size: 16px;
-    font-family: monospace;
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
     font-weight: bold;
-    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
-.arrows button:hover{
-    background: #fff;
-    color: #000;
+.arrows button:hover {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
-
+.arrows button:hover::before {
+    opacity: 1;
+}
 /* time running */
 .carousel .timeRunning{
     position: absolute;
@@ -277,7 +289,9 @@ footer {
     bottom: 10px; /* Espacio encima del pie de página */
     left: -250px; /* Ocultar inicialmente */
     width: 200px;
-    background-color: #222;
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-position: center;
     color: #4caf50;
     overflow-y: auto; /* Habilitar scroll si el contenido es demasiado */
     transition: left 0.3s ease;
@@ -350,7 +364,7 @@ footer {
         font-size: 1.2rem; /* Tamaño reducido en dispositivos móviles */
     }
 
-    .carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(1),
 .carousel .list .item:nth-child(2){
     top: 0;
     left: 0;
@@ -361,6 +375,7 @@ footer {
 }
 
 .carousel .list .item:nth-child(3){
+    top: 65%;
     left: 35%;
 }
 
@@ -369,11 +384,13 @@ footer {
 }
 
 .carousel .list .item:nth-child(5){
-    left: calc(35% + 400px);
+    top: 75%;
+    left: calc(0% + 250px);
 }
 
 .carousel .list .item:nth-child(6){
-    left: calc(35% + 600px);
+    top: 80%;
+    left: calc(0% + 300px);
 }
 
 .carousel .list .item:nth-child(n+7){
@@ -409,14 +426,16 @@ footer {
 /* Estilizado general de la sección */
 .contacto {
     padding: 40px;
-    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin: 20px auto; /* Asegura que el formulario esté centrado */
+    margin: 0 auto; /* Asegura que el formulario esté centrado */
     font-family: 'Arial', sans-serif;
-    color: #333;
-    height: 89vh; /* Hace que el contenedor ocupe el 100% de la altura de la ventana */
+    color: #ffffff;
+    height: 100vh; /* Hace que el contenedor ocupe el 100% de la altura de la ventana */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra el contenido verticalmente */
@@ -425,10 +444,14 @@ footer {
 
 .contacto h2 {
     text-align: center;
-    color: #333;
     font-size: 28px;
     margin-bottom: 10px;
+    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
+    -webkit-background-clip: text; /* WebKit, para Chrome y Safari */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-text-fill-color: transparent; /* Hace transparente el relleno del texto */
 }
+
 
 .contacto p {
     text-align: center;
@@ -436,84 +459,48 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Estilizado del formulario */
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#contactForm label {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-#contactForm input,
-#contactForm textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-#contactForm textarea {
-    min-height: 100px;
-    resize: none;
-}
-
-#contactForm button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contactForm button:hover {
-    background-color: #45a049;
-}
-
 .hidden {
     display: none;
 }
 
 .email-button button {
-    background-color: #333; /* Color rojo */
-    color: rgb(255, 255, 255); /* Texto blanco */
+    background-color: #ffffff; /* Fondo blanco */
+    color: rgb(0, 0, 0); /* Texto negro */
     padding: 15px 32px; /* Tamaño del botón */
     font-size: 16px; /* Tamaño de fuente */
-    border: none; /* Sin borde */
+    font-weight: bold;
+    border: 3px solid rgb(0, 255, 13); /* Primera línea roja */
+    outline: 6px solid white; /* Segunda línea blanca */
+    box-shadow: 0 0 0 9px rgb(123, 226, 5); /* Tercera línea roja */
     cursor: pointer; /* Cursor de mano */
     border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: all 0.3s ease; /* Animación suave en todas las propiedades */
+    transition: all 0.3s ease; /* Animación suave */
 }
 
 .email-button button:hover {
-    background-color: #e60000; /* Color rojo oscuro al pasar el ratón */
     transform: translateY(-2px); /* Movimiento hacia arriba */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    box-shadow: 0 0 0 9px red, 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra y borde rojo */
 }
 
 .email-button button:active {
     transform: translateY(2px); /* Movimiento hacia abajo al hacer clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+    box-shadow: 0 0 0 9px red, 0 2px 4px rgba(0, 0, 0, 0.1); /* Borde y sombra más ligera */
 }
 
 
 /* Contenedor de los botones alineados horizontalmente */
 .social-buttons {
+    position: absolute; /* O fixed si quieres que siempre sean visibles */
+    bottom: 20px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    gap: 10px; /* Espacio entre los botones */
-    justify-content: center; /* Centrar los botones horizontalmente */
-    margin: 0px 0;
-    background-color: #333;
+    gap: 10px; /* Espacio entre botones */
+    z-index: 1000; /* Asegura que estén encima de otros elementos */
+
 }
+
+
 
 /* Estilo base para los botones */
 .facebook-button, .whatsapp-button, .tiktok-button {
@@ -561,4 +548,8 @@ footer {
 
 .tiktok-button:hover {
     background-color: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
 }
