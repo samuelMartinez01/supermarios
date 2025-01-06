@@ -90,18 +90,18 @@ footer {
 
 
 
-/* carousel */
+/* carousel foto grande*/
 
 .carousel{
     width: 100vw;
-    height: 100vh;
+    height: 98vh;
     overflow: hidden;
     position: relative;
 }
 
 .carousel .list .item{
     width: 180px;
-    height: 250px;
+    height: 200px; /* tamanio de las fotos de la lista */
     position: absolute;
     top: 70%;
     transform: translateY(-70%);
@@ -223,7 +223,7 @@ footer {
 
 .arrows{
     position: absolute;
-    top: 80%;
+    top: 60%;
     right: 68%;
     z-index: 100;
     width: 300px;
@@ -375,21 +375,22 @@ footer {
 }
 
 .carousel .list .item:nth-child(3){
-    top: 65%;
+    top: 50%;
     left: 35%;
 }
 
 .carousel .list .item:nth-child(4){
+    top: 55%;
     left: calc(0% + 200px);
 }
 
 .carousel .list .item:nth-child(5){
-    top: 75%;
+    top: 60%;
     left: calc(0% + 250px);
 }
 
 .carousel .list .item:nth-child(6){
-    top: 80%;
+    top: 65%;
     left: calc(0% + 300px);
 }
 
