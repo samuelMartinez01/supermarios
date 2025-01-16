@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Super Mario's</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
     </head>
 
     <body>
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"></script>
+
         <header>
             <button id="menuToggle">☰</button>
             <div class="logo-container">
@@ -27,6 +30,7 @@
           <nav>
             <button onclick="changeScreen('Screen1')">Home</button>
             <button onclick="changeScreen('Screen2')">Contact</button>
+            <button onclick="changeScreen('Screen3')">Proyectos</button>
           </nav>
         </aside>
       
@@ -147,6 +151,17 @@
                 <p></p>
                 <p>Or you can visit us through our social media platforms 👇</p>
             </div>
+            <div id="Screen3" class="proyectos">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRealMadrid%2Fposts%2Fpfbid02xKS4kTnR3qWwGieFFfXJFK68tnSPsXhjN5Gy8MkiD2HuuaD2qeCijumto5qBHVKSl&show_text=true&width=500" 
+                width="500" 
+                height="563" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            
+            </div>
         </main>
     
         <div class="social-buttons">
@@ -158,11 +173,6 @@
             <div class="facebook-button">
                 <a href="https://www.facebook.com/people/SUPER-MARIOs-Handyman/61567634759104/" target="_blank" class="facebook-link">
                     <i class="fab fa-facebook"></i> Facebook
-                </a>
-            </div>
-            <div class="tiktok-button">
-                <a href="https://vm.tiktok.com/ZMkDcHMvx/" target="_blank" class="tiktok-link">
-                    <i class="fab fa-tiktok"></i> TikTok
                 </a>
             </div>
         </div>

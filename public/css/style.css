@@ -426,7 +426,7 @@ footer {
 
 /* Contenedor de los botones alineados horizontalmente */
 .social-buttons {
-    position: absolute; /* O fixed si quieres que siempre sean visibles */
+    position: fixed; /* O fixed si quieres que siempre sean visibles */
     bottom: 20px; /* Ajusta según sea necesario */
     left: 50%;
     transform: translateX(-50%);
@@ -476,14 +476,6 @@ footer {
 
 .whatsapp-button:hover {
     background-color: #128C7E;
-}
-
-.tiktok-button {
-    background-color: #010101; /* Color negro de TikTok */
-}
-
-.tiktok-button:hover {
-    background-color: #333333;
 }
 
 html {

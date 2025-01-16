@@ -87,6 +87,8 @@ function changeScreen(screen) {
         document.querySelector(".carousel").classList.remove("hidden");
     } else if (screen === 'Screen2') {
         document.querySelector("#Screen2").classList.remove("hidden");
+    }else if (screen === 'Screen3') {
+        document.querySelector("#Screen3").classList.remove("hidden");
     }
 
     sidebar.classList.remove("open");
