@@ -30,7 +30,8 @@
           <nav>
             <button onclick="changeScreen('Screen1')">Home</button>
             <button onclick="changeScreen('Screen2')">Contact</button>
-            <button onclick="changeScreen('Screen3')">Proyectos</button>
+            <button onclick="changeScreen('Screen3')">Proyectos facebook</button>
+            <button onclick="changeScreen('Screen4')">Galery</button>
           </nav>
         </aside>
       
@@ -171,6 +172,34 @@
                 frameborder="0" 
                 allowfullscreen="true" 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <div id="Screen4" class="galery">
+                <div class="headergalery" id="myHeader">
+                    <h1>Image Grid</h1>
+                    <p>Click on the buttons to change the grid view.</p>
+                    <button class="btn" onclick="one()">1</button>
+                    <button class="btn active" onclick="two()">2</button>
+                    <button class="btn" onclick="three()">3</button>
+                  </div>
+                <div class="row">
+                    <div class="column">
+                      <img src="./images/pryimg/image.webp">
+                      <img src="./images/pryimg/image-4.webp">
+                    </div>
+                    <div class="column">
+                        <img src="./images/pryimg/image-1.webp">
+                        <img src="./images/pryimg/image-12.webp">
+                    </div>
+                    <div class="column">
+                        <img src="./images/pryimg/image-2.webp">
+                        <img src="./images/pryimg/image-13.webp">
+                    </div>
+                    <div class="column">
+                        <img src="./images/pryimg/image-3.webp">
+                    </div>
+    
+                  </div>
             </div>
             
         </main>
