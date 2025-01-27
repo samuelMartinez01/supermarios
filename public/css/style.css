@@ -338,25 +338,6 @@ footer {
     background-color: #555;
   }
 
-  /* Contenido principal */
-  main {
-    flex: 1;
-}
-  .main-content {
-    margin-top: 0px; /* Espacio para el header */
-    margin-bottom: 0px; /* Espacio para el footer */
-    padding: 0px;
-    overflow: hidden;
-}
-
-
-  .main-content.collapsed {
-    margin-left: 0;
-  }
-
-
-/* Ocultar inicialmente la sección */
-
 /* Estilizado general de la sección */
 .contacto {
     padding: 40px;
@@ -436,8 +417,10 @@ footer {
 
 
 
+
+
 /* Estilo base para los botones */
-.facebook-button, .whatsapp-button, .tiktok-button {
+.facebook-button, .whatsapp-button {
     padding: 4px 9px;
     border-radius: 5px;
     text-align: center;
@@ -503,26 +486,32 @@ html {
 .carousel .list .item:nth-child(3){
     top: 50%;
     left: 35%;
+    border: 5px solid #001f3f;
 }
 
 .carousel .list .item:nth-child(4){
     top: 55%;
     left: calc(0% + 200px);
+    border: 5px solid #001f3f;
+    
 }
 
 .carousel .list .item:nth-child(5){
     top: 60%;
     left: calc(0% + 250px);
+    border: 5px solid #001f3f;
 }
 
 .carousel .list .item:nth-child(6){
     top: 65%;
     left: calc(0% + 300px);
+    border: 5px solid #001f3f;
 }
 
 .carousel .list .item:nth-child(n+7){
     left: calc(35% + 800px);
     opacity: 0;
+    border: 5px solid #001f3f;
 }
 
 .content .title, .content .name {
@@ -536,6 +525,7 @@ html {
         background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
         padding: 20px; /* Espaciado alrededor del texto */
         border-radius: 10px; /* Si quieres bordes redondeados */
+        border: 5px solid #001f3f;
     }
 
     .logo {
@@ -549,6 +539,25 @@ html {
 
     
 }
+
+.proyectos {
+    padding: 40px;
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex; /* Habilita Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si no caben */
+    gap: 5px; /* Espaciado uniforme entre los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Alinea los iframes en la parte superior */
+}
+iframe {
+    border: none;
+    overflow: hidden;
+    width: 500px; /* Ajusta un tamaño uniforme */
+    height: 540px; /* Ajusta un tamaño uniforme */
+}
+
 
 .galery {
     background: linear-gradient(135deg, #001f3f, #0a0a0a);
@@ -565,6 +574,7 @@ html {
     font-size: 15px;
     position: fixed;
     display:flex;
+    flex-direction: row;
     padding: 5px 20px;
     z-index: 1000;
     background: linear-gradient(135deg, #001f3f, #0a0a0a);
@@ -576,7 +586,7 @@ html {
   .row {
     display: -ms-flexbox; /* IE 10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 0 4px;
   }
