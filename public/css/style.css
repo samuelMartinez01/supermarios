@@ -450,7 +450,7 @@ footer {
 }
 
 /* Estilo del enlace dentro de cada botón */
-.facebook-link, .whatsapp-link, .tiktok-link {
+.facebook-link, .whatsapp-link {
     text-decoration: none;
     color: white;
     display: flex;
@@ -550,17 +550,28 @@ html {
     
 }
 
+.galery {
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
+}
+
 * {
     box-sizing: border-box;
   }
   
-  
-
 
   .headergalery{
     text-align: center;
     padding: 32px;
+    font-size: 15px;
+    position: fixed;
+    display:flex;
+    padding: 5px 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
+    height: 60px;
   }
+
+ 
   
   .row {
     display: -ms-flexbox; /* IE 10 */
@@ -569,7 +580,6 @@ html {
     flex-wrap: wrap;
     padding: 0 4px;
   }
-
 
   
   /* Create two equal columns that sits next to each other */
@@ -584,26 +594,30 @@ html {
     vertical-align: middle;
   }
 
-
-
-
-  
   /* Style the buttons */
   .btn {
     border: none;
     outline: none;
     padding: 10px 16px;
-    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
     cursor: pointer;
     font-size: 18px;
   }
   
   .btn:hover {
-    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
   }
   
   .btn.active {
     background-color: #666;
     color: white;
+  }
+
+  .btnBack {
+    outline: none;
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
+    cursor: pointer;
+    border-radius: 10px;
+    padding:10px
   }
 
