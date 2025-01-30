@@ -31,14 +31,22 @@
             <button onclick="changeScreen('Screen1')">Home</button>
             <button onclick="changeScreen('Screen2')">Contact</button>
             <button onclick="changeScreen('Screen3')">Proyectos facebook</button>
-            <button onclick="changeScreen('Screen4')">Galery</button>
+            <button onclick="changeScreen('Screen4')">Gallery</button>
           </nav>
         </aside>
       
         <!-- Contenido principal -->
         <main id="mainContent" class="main-content collapsed">
+            
             <div class="carousel">
-
+<!-- From Uiverse.io by elijahgummer --> 
+<button class="btn-gallery" onclick="changeScreen('Screen4')">
+    <svg viewBox="0 0 24 24">
+        <path d="M5 2c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2H5m0 2h14v16H5V4m1 2v4.5l2.25-2.25L10 10l3.25-3.25L18 11V6H6m0 7.67V18h12v-4.33l-3.25-3.25L10 14l-2.75-2.75L6 13.67Z"/>
+    </svg>
+    Gallery
+</button>
+  
                 <div class="list">
             
                     <div class="item" style="background-image: url(images/img1.jpg);">
@@ -130,13 +138,15 @@
             
                 <!--next prev button-->
                 <div class="arrows">
-                    <button class="prev"><</button>
+                    <button class="prev"></button>
                     <button class="next">></button>
                 </div>
             
             
                 <!-- time running -->
                 <div class="timeRunning"></div>
+
+                
             
             </div>
             
@@ -168,15 +178,13 @@
                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02w5uCSx58ohb9YLYDGvBmJekDbtgzaG5v6hsCYcb3DSCnp8EsGtBqSND4gt8LG6KCl%26id%3D61567634759104&width=400&show_text=true&height=516&appId" 
                 width="380" 
                 height="540" 
-                style="border:none; overflow:hidden; position: relative; top: 60px;" 
                 scrolling="no" 
                 frameborder="0" 
                 allowfullscreen="true" 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0d3M2HbP9uWJ6rnM44pa4tYk2jrLxeh7JaJAjxowWzHMKMW1hz9yVkxvr7mBQGtQRl%26id%3D61567634759104&width=300&show_text=true&height=466&appId" width="380" 
-                height="540" 
-                style="border:none; overflow:hidden; position: relative; top: 70px;" 
+                height="540"
                 scrolling="no" 
                 frameborder="0" 
                 allowfullscreen="true" 
@@ -184,8 +192,7 @@
 
                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02iXUUMyfaevTWzuRL1GBvAfd4md6cAjhXCcZPeuZyQpyxQ5hTxPfVNRtQWuK58Aakl%26id%3D61567634759104&show_text=true&width=500" 
                 width="380" 
-                height="540" 
-                style="border:none; overflow:hidden; position: relative; top: 70px;" 
+                height="540"
                 scrolling="no" 
                 frameborder="0" 
                 allowfullscreen="true" 
@@ -236,12 +243,13 @@
                 </a>
             </div>
         </div>
+
+        
         
         <footer>
             <p>&copy; 2025 Super Mario's Handyman</p>
         </footer>
       </body>
-
-
     <script src="js/script.js"></script>
+    
 </html>

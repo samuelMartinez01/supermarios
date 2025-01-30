@@ -79,23 +79,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function changeScreen(screen) {
+    // Obtiene todos los div dentro de main
     const screens = document.querySelectorAll("main > div");
-    console.log(screens); // Verifica qué elementos está seleccionando
-    screens.forEach((s) => s.classList.add("hidden"));
 
+    // Oculta todos los div
+    screens.forEach((s) => s.classList.remove("active"));
+
+    // Muestra solo el div correspondiente
     if (screen === 'Screen1') {
-        document.querySelector(".carousel").classList.remove("hidden");
-    } else if (screen === 'Screen2') {
-        document.querySelector("#Screen2").classList.remove("hidden");
-    }else if (screen === 'Screen3') {
-        document.querySelector("#Screen3").classList.remove("hidden");
-    }else if (screen === 'Screen4') {
-        document.querySelector("#Screen4").classList.remove("hidden");
+        document.querySelector(".carousel").classList.add("active");
+    } else {
+        const targetScreen = document.querySelector(`#${screen}`);
+        if (targetScreen) {
+            targetScreen.classList.add("active");
+        }
     }
 
+    // Cierra el sidebar y colapsa el main si es necesario
     sidebar.classList.remove("open");
     mainContent.classList.add("collapsed");
 }
+
 
 
 // Get the elements with class="column"
@@ -126,17 +130,4 @@ function three() {
     elements[i].style.msFlex = "33.33%";  // IE10
     elements[i].style.flex = "33.33%";
   }
-}
-
-
-
-// Add active class to the current button (highlight it)
-var header = document.getElementById("myHeader");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
 }
