@@ -261,12 +261,13 @@ footer {
   .sidebar nav button {
     background: none;
     border: none;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #171717, #242424);
     text-align: left;
     padding: 10px 20px;
     margin: 5px 0;
     font-size: 1rem;
     cursor: pointer;
+    border-radius: 8px;
 }
 
   .sidebar nav button:hover {
@@ -294,71 +295,17 @@ footer {
     margin-left: 0;
   }
 
-
-/* Estilizado general de la sección */
 .contacto {
-    padding: 40px;
+    padding: 20px;
     background: linear-gradient(to bottom, #171717, #242424);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto; /* Asegura que el formulario esté centrado */
-    font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    height: 100vh; /* Hace que el contenedor ocupe el 100% de la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
+    height: 100vh; 
+    align-content: center;
 }
 
-.contacto h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #4caf50 0%, #8bc34a 50%, #cddc39 100%);
-    -webkit-background-clip: text; /* WebKit, para Chrome y Safari */
-    background-clip: text; /* Propiedad estándar */
-    -webkit-text-fill-color: transparent; /* Hace transparente el relleno del texto */
-}
-
-
-.contacto p {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
 
 .hidden {
     display: none;
 }
-
-.email-button button {
-    background-color: #ffffff; /* Fondo blanco */
-    color: rgb(0, 0, 0); /* Texto negro */
-    padding: 15px 32px; /* Tamaño del botón */
-    font-size: 16px; /* Tamaño de fuente */
-    font-weight: bold;
-    border: 3px solid rgb(0, 255, 13); /* Primera línea roja */
-    outline: 6px solid white; /* Segunda línea blanca */
-    box-shadow: 0 0 0 9px rgb(123, 226, 5); /* Tercera línea roja */
-    cursor: pointer; /* Cursor de mano */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: all 0.3s ease; /* Animación suave */
-}
-
-.email-button button:hover {
-    transform: translateY(-2px); /* Movimiento hacia arriba */
-    box-shadow: 0 0 0 9px red, 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra y borde rojo */
-}
-
-.email-button button:active {
-    transform: translateY(2px); /* Movimiento hacia abajo al hacer clic */
-    box-shadow: 0 0 0 9px red, 0 2px 4px rgba(0, 0, 0, 0.1); /* Borde y sombra más ligera */
-}
-
 
 /* Contenedor de los botones alineados horizontalmente */
 .social-buttons {
@@ -693,4 +640,52 @@ html {
         transition: all 0.4s ease-in-out;
         background: linear-gradient(to bottom, #171717, #242424);
       }
+
+        /* From Uiverse.io by satyamchaudharydev */ 
+.card {
+    width: 350px;
+    height: 350px;
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background: linear-gradient(135deg, #242424, #303030);
+    border-radius: 20px;
+    filter: drop-shadow(0 10px 20px rgba(26, 25, 25, 0.9))
+  drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+transition: all 0.4s ease-in-out;
+  }
+  
+  .card > * {
+    margin: 0;
+  }
+  
+  .card__title {
+    font-size: 23px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+  
+  .card__content {
+    font-size: 13px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+  
+  .card__form button {
+    border: 0;
+    background: #111;
+    color: #fff;
+    padding: 0.68em;
+    border-radius: 14px;
+    font-weight: bold;
+  }
+  
+  .sign-up:hover {
+    opacity: 0.8;
+  } 
+  
 }
