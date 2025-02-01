@@ -12,14 +12,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 100px;
     background: linear-gradient(to bottom, #171717, #242424);
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
     z-index: 1000;
+    height: 200px;
+    
 }
 
 
@@ -69,15 +70,17 @@ body {
 
 footer {
     text-align: center;
-    background: linear-gradient(135deg, #001f3f, #0a0a0a);
+    background: #0a0a0a;
     background-size: cover;
     background-position: center;
     color: #fff;
     padding: 1rem;
     font-size: 0.9rem;
-    position: relative; /* Asegura que esté en el flujo del documento */
-    height: auto; /* Se ajusta al contenido */
-    z-index: 2000; /* Más alto que el sidebar */
+    z-index: 200; /* Más alto que el sidebar */
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    
 }
 
 
@@ -89,7 +92,7 @@ footer {
     align-items: center;
     top: 200px;
     width: 100vw;
-    height: 98vh;
+    height: 93vh;
     overflow: hidden;
     position: relative;
 }
@@ -98,7 +101,7 @@ footer {
     width: 180px;
     height: 200px; /* tamanio de las fotos de la lista */
     position: absolute;
-    top: 70%;
+    top: 50%;
     transform: translateY(-70%);
     left: 80%;
     border-radius: 20px;
@@ -140,10 +143,6 @@ footer {
     opacity: 0;
 }
 
-
-
-
-
 .list .item .content{
     position: absolute;
     top: 20%;
@@ -162,10 +161,10 @@ footer {
 }
 
 .content .title{
-    font-size: 100px;
+    font-size: 60px;
     text-transform: uppercase;
     text-align: left;
-    color: #14ff72cb;
+    color: #ffffffcb;
     font-weight: bold;
     line-height: 1;
     opacity: 0;
@@ -174,25 +173,15 @@ footer {
 
 
 .content .name{
-    font-size: 100px;
+    font-size: 80px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: left;
     line-height: 1;
-    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
-
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
-.content .des{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    margin-left: 5px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.9s 1 forwards;
-}
 
 @keyframes animate {
     
@@ -217,7 +206,7 @@ footer {
     z-index: 1000;
     width: 0%;
     height: 4px;
-    background-color: #14ff72cb;
+    background-color: #ffffffcb;
     left: 0;
     top: 0;
     animation: runningTime 7s linear 1 forwards;
@@ -248,6 +237,7 @@ footer {
     display: flex;
     flex-direction: column;
     height: 100%; /* Ocupa toda la altura de la ventana */
+    
 }
 
   .sidebar.open {
@@ -372,18 +362,18 @@ footer {
 
 /* Contenedor de los botones alineados horizontalmente */
 .social-buttons {
-    position: fixed; /* O fixed si quieres que siempre sean visibles */
-    bottom: 20px; /* Ajusta según sea necesario */
-    left: 50%;
+    position: fixed;
+    bottom: 20px;
+    left: 23%;
     transform: translateX(-50%);
-    display: flex;
-    gap: 10px; /* Espacio entre botones */
-    z-index: 1000; /* Asegura que estén encima de otros elementos */
-
+    flex-direction: column;
+    z-index: 500; 
 }
 
 /* Estilo base para los botones */
 .facebook-button, .whatsapp-button {
+    background: linear-gradient(to bottom, #171717, #242424);
+    margin-bottom: 10px;
     padding: 4px 9px;
     border-radius: 5px;
     text-align: center;
@@ -405,22 +395,10 @@ footer {
     gap: 10px;
 }
 
-/* Estilo específico para cada botón */
-.facebook-button {
-    background-color: #3b5998;
+.gallery-button {
+ display: none;
 }
 
-.facebook-button:hover {
-    background-color: #2d4373;
-}
-
-.whatsapp-button {
-    background-color: #25D366;
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E;
-}
 
 html {
     scroll-behavior: smooth;
@@ -463,6 +441,19 @@ html {
     cursor: pointer;
   }
 
+  footer {
+    text-align: center;
+    background: #0a0a0a;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative; /* Asegura que esté en el flujo del documento */
+    height: auto; /* Se ajusta al contenido */
+    z-index: 200; /* Más alto que el sidebar */
+}
+
 
   .carousel{
     top: 60px;
@@ -484,32 +475,32 @@ html {
 .carousel .list .item:nth-child(3){
     top: 40%;
     left: 35%;
-    border: 1px solid #252525;
+    border: 2px solid #252525;
 }
 
 .carousel .list .item:nth-child(4){
     top: 45%;
     left: calc(0% + 200px);
-    border: 1px solid #252525;
+    border: 2px solid #252525;
     
 }
 
 .carousel .list .item:nth-child(5){
     top: 50%;
     left: calc(0% + 250px);
-    border: 1px solid #252525;
+    border: 2px solid #252525;
 }
 
 .carousel .list .item:nth-child(6){
     top: 55%;
     left: calc(0% + 300px);
-    border: 1px solid #252525;
+    border: 2px solid #252525;
 }
 
 .carousel .list .item:nth-child(n+7){
     left: calc(35% + 800px);
     opacity: 0;
-    border: 1px solid #252525;
+    border: 2px solid #252525;
 }
 
 .content .title, .content .name {
@@ -525,6 +516,8 @@ html {
         padding: 20px; /* Espaciado alrededor del texto */
         border-radius: 10px; /* Si quieres bordes redondeados */
         border: 5px solid #001f3f;
+        filter: drop-shadow(0 10px 20px rgba(34, 33, 33, 0.9))
+        drop-shadow(0 0 4px rgb(92, 85, 85));
     }
 
     .logo {
@@ -537,28 +530,34 @@ html {
     }
 
     .proyectos {
-        padding: 40px;
+        
+        padding: 25px;
         background: linear-gradient(to bottom, #171717, #242424);
         border-radius: 40px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         display: flex; /* Habilita Flexbox */
         flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si no caben */
-        gap: 5px; /* Espaciado uniforme entre los elementos */
+        gap: 10px; /* Espaciado uniforme entre los elementos */
         justify-content: center; /* Centra horizontalmente */
-        align-items: flex-start; /* Alinea los iframes en la parte superior */
+        align-items: center; /* Centra verticalmente */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        text-align: center; /* Alinea elementos en su interior */
     }
     
     iframe {
-        border: none;
+        margin: auto;
+        display: block;
         overflow: hidden;
         width: 330px; /* Ajusta un tamaño uniforme */
         height: 400px; /* Ajusta un tamaño uniforme */
-        justify-content: center; /* Centra horizontalmente */
+        display: block; /* Elimina cualquier espacio no deseado */
     }
+    
     
     
     .galery {
         background: linear-gradient(to bottom, #171717, #242424);
+        z-index: 3000;
     }
     
     * {
@@ -642,33 +641,43 @@ html {
       color: white;
       }
 
-      .btn-gallery {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 20px;
-        font-size: 18px;
-        font-family: 'Poppins', sans-serif;
-        color: white;
-        background: linear-gradient(135deg, #171717, #242424);
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        position: relative;
-        overflow: hidden;
-        z-index: 200;
-        margin-top: 500px;
-        left: 220px;
-    }
+      /* Estilo base para los botones */
+      
+ .facebook-button, .whatsapp-button, .btn-gallery{
+    margin-bottom: 10px;
+    padding: 4px 9px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width:150px; /* Hace que todos los botones tengan el mismo ancho */
+}
 
-    .btn-gallery svg {
-        width: 24px;
-        height: 24px;
-        fill: white;
-        transition: transform 0.3s ease;
-        
-    }
+
+.facebook-link, .whatsapp-link, .btn-gallery {
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-button {
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 41px;
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+}
+.btn-gallery svg {
+    height: 20px;
+    fill: white;
+    transition: transform 0.3s ease;
+    margin-right: 8px;
+}
 
     .btn-gallery:hover {
         transform: translateY(-3px);
@@ -676,11 +685,12 @@ html {
         filter: drop-shadow(0 10px 20px rgba(26, 25, 25, 0.9))
       drop-shadow(0 0 4px rgba(0, 0, 0, 1));
     transition: all 0.4s ease-in-out;
-
+    
     }
 
-    .btn-gallery:hover svg {
-        transform: rotate(10deg);
-    }
   
+    .btn-gallery, .facebook-button, .whatsapp-button{
+        transition: all 0.4s ease-in-out;
+        background: linear-gradient(to bottom, #171717, #242424);
+      }
 }

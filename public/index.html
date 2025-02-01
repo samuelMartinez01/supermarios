@@ -16,12 +16,10 @@
         <header>
             <button id="menuToggle">☰</button>
             <div class="logo-container">
-                <h1>
-                    <span style="color: #4caf50;"></span>
+                <button onclick="changeScreen('Screen1')"><h1>
                     Super Mario's Handyman
-                    <span style="color: #4caf50;"></span>
-                </h1>
-                <button onclick="changeScreen('Screen1')"><img class="logo" src="images/logo.webp" alt="Logo Super Mario's"></button>
+                </h1></button>
+                <img class="logo" src="images/logo.webp" alt="Logo Super Mario's">
             </div>
         </header>
         
@@ -40,12 +38,6 @@
             
             <div class="carousel">
 <!-- From Uiverse.io by elijahgummer --> 
-<button class="btn-gallery" onclick="changeScreen('Screen4')">
-    <svg viewBox="0 0 24 24">
-        <path d="M5 2c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2H5m0 2h14v16H5V4m1 2v4.5l2.25-2.25L10 10l3.25-3.25L18 11V6H6m0 7.67V18h12v-4.33l-3.25-3.25L10 14l-2.75-2.75L6 13.67Z"/>
-    </svg>
-    Gallery
-</button>
   
                 <div class="list">
             
@@ -135,19 +127,34 @@
             
             
                 </div>
-            
                 <!--next prev button-->
                 <div class="arrows">
                     <button class="prev"></button>
                     <button class="next">></button>
                 </div>
             
-            
                 <!-- time running -->
                 <div class="timeRunning"></div>
+                <div class="social-buttons">
+                    <div class="gallery-button">
+                    <button class="btn-gallery" onclick="changeScreen('Screen4')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 2c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2H5m0 2h14v16H5V4m1 2v4.5l2.25-2.25L10 10l3.25-3.25L18 11V6H6m0 7.67V18h12v-4.33l-3.25-3.25L10 14l-2.75-2.75L6 13.67Z"/>
+                        </svg>
+                         Gallery
+                    </button></div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/1(757)9200250" target="_blank" class="whatsapp-link">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                    <div class="facebook-button">
+                        <a href="https://www.facebook.com/people/SUPER-MARIOs-Handyman/61567634759104/" target="_blank" class="facebook-link">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </div>
 
-                
-            
+                </div>
             </div>
             
             <div id="Screen2" class="contacto">
@@ -230,22 +237,6 @@
             </div>
             
         </main>
-    
-        <div class="social-buttons">
-            <div class="whatsapp-button">
-                <a href="https://wa.me/1(757)9200250" target="_blank" class="whatsapp-link">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-            <div class="facebook-button">
-                <a href="https://www.facebook.com/people/SUPER-MARIOs-Handyman/61567634759104/" target="_blank" class="facebook-link">
-                    <i class="fab fa-facebook"></i> Facebook
-                </a>
-            </div>
-        </div>
-
-        
-        
         <footer>
             <p>&copy; 2025 Super Mario's Handyman</p>
         </footer>
