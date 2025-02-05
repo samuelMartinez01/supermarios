@@ -420,38 +420,43 @@ html {
 }
 
 .carousel .list .item:nth-child(3){
-    top: 40%;
-    left: 35%;
+    top: 58%;
+    left: 55%;
     border: 2px solid #252525;
 }
 
 .carousel .list .item:nth-child(4){
-    top: 45%;
-    left: calc(0% + 200px);
+    top: 61%;
+    left: 60%;
     border: 2px solid #252525;
     
 }
 
 .carousel .list .item:nth-child(5){
-    top: 50%;
-    left: calc(0% + 250px);
+    top: 63%;
+    left: 65%;
     border: 2px solid #252525;
 }
 
 .carousel .list .item:nth-child(6){
-    top: 55%;
-    left: calc(0% + 300px);
+    top: 65%;
+    left: 70%;
     border: 2px solid #252525;
 }
 
+.carousel .list .item:nth-child(7){
+  top: 70%;
+  left: 80%;
+  border: 2px solid #252525;
+}
+
 .carousel .list .item:nth-child(n+7){
-    left: calc(35% + 800px);
-    opacity: 0;
+    left: calc(53% + 200px);
     border: 2px solid #252525;
 }
 
 .content .title, .content .name {
-    font-size: 25px; 
+    font-size: 20px; 
 }
 
 
