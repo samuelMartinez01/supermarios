@@ -1,133 +1,155 @@
+// ========== CARRUSEL ==========
 var nextBtn = document.querySelector('.next'),
     prevBtn = document.querySelector('.prev'),
     carousel = document.querySelector('.carousel'),
     list = document.querySelector('.list'), 
     item = document.querySelectorAll('.item'),
-    runningTime = document.querySelector('.carousel .timeRunning') 
+    runningTime = document.querySelector('.carousel .timeRunning');
 
-let timeRunning = 3000 
-let timeAutoNext = 7000
+let timeRunning = 3000;
+let timeAutoNext = 7000;
 
-nextBtn.onclick = function(){
-    showSlider('next')
-}
+nextBtn.onclick = function() {
+    showSlider('next');
+};
 
-prevBtn.onclick = function(){
-    showSlider('prev')
-}
+prevBtn.onclick = function() {
+    showSlider('prev');
+};
 
-let runTimeOut 
-
+let runTimeOut;
 let runNextAuto = setTimeout(() => {
-    nextBtn.click()
-}, timeAutoNext)
-
+    nextBtn.click();
+}, timeAutoNext);
 
 function resetTimeAnimation() {
-    runningTime.style.animation = 'none'
-    runningTime.offsetHeight /* trigger reflow */
-    runningTime.style.animation = null 
-    runningTime.style.animation = 'runningTime 7s linear 1 forwards'
+    runningTime.style.animation = 'none';
+    runningTime.offsetHeight; // trigger reflow
+    runningTime.style.animation = 'runningTime 7s linear 1 forwards';
 }
-
 
 function showSlider(type) {
-    let sliderItemsDom = list.querySelectorAll('.carousel .list .item')
-    if(type === 'next'){
-        list.appendChild(sliderItemsDom[0])
-        carousel.classList.add('next')
-    } else{
-        list.prepend(sliderItemsDom[sliderItemsDom.length - 1])
-        carousel.classList.add('prev')
+    let sliderItemsDom = list.querySelectorAll('.carousel .list .item');
+    if (type === 'next') {
+        list.appendChild(sliderItemsDom[0]);
+        carousel.classList.add('next');
+    } else {
+        list.prepend(sliderItemsDom[sliderItemsDom.length - 1]);
+        carousel.classList.add('prev');
     }
 
-    clearTimeout(runTimeOut)
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+        carousel.classList.remove('next');
+        carousel.classList.remove('prev');
+    }, timeRunning);
 
-    runTimeOut = setTimeout( () => {
-        carousel.classList.remove('next')
-        carousel.classList.remove('prev')
-    }, timeRunning)
-
-
-    clearTimeout(runNextAuto)
+    clearTimeout(runNextAuto);
     runNextAuto = setTimeout(() => {
-        nextBtn.click()
-    }, timeAutoNext)
+        nextBtn.click();
+    }, timeAutoNext);
 
-    resetTimeAnimation() // Reset the running time animation
+    resetTimeAnimation();
 }
 
-// Start the initial animation 
-resetTimeAnimation()
-
-
+// ========== MENÚ LATERAL ==========
 const menuToggle = document.getElementById("menuToggle");
-const closeSidebar = document.getElementById("closeSidebar");
 const sidebar = document.getElementById("sidebar");
 const mainContent = document.getElementById("mainContent");
 
-// Abrir y cerrar el menú lateral
 menuToggle.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
-  mainContent.classList.toggle("collapsed");
+    sidebar.classList.toggle("open");
+    mainContent.classList.toggle("collapsed");
 });
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Mostrar Screen1 por defecto cuando la página se cargue
-    changeScreen('Screen1');
-});
-
+// ========== GESTIÓN DE PANTALLAS ==========
 function changeScreen(screen) {
-    // Obtiene todos los div dentro de main
-    const screens = document.querySelectorAll("main > div");
+    // Ocultar todas las pantallas
+    document.querySelectorAll("main > div").forEach((s) => {
+        s.classList.remove("active");
+    });
 
-    // Oculta todos los div
-    screens.forEach((s) => s.classList.remove("active"));
 
-    // Muestra solo el div correspondiente
     if (screen === 'Screen1') {
         document.querySelector(".carousel").classList.add("active");
     } else {
-        const targetScreen = document.querySelector(`#${screen}`);
-        if (targetScreen) {
-            targetScreen.classList.add("active");
-        }
+    // Mostrar la pantalla seleccionada
+     const targetScreen = document.getElementById(screen);
+     if (targetScreen) {
+     targetScreen.classList.add("active");
+     
+     // Si es la galería, cargar las imágenes
+     if (screen === 'Screen4') {
+         loadGalleryImages();
+     }
+ }
     }
 
-    // Cierra el sidebar y colapsa el main si es necesario
+    // Cerrar el menú lateral
     sidebar.classList.remove("open");
     mainContent.classList.add("collapsed");
 }
 
+// ========== GALERÍA ==========
+function loadGalleryImages() {
+    const images = [
+        "image.webp", "image-1.webp", "image-2.webp", "image-3.webp",
+        "image-4.webp", "image-12.webp", "image-13.webp", "image-14.webp",
+        "image-15.webp", "img1.webp", "img2.webp", "img3.webp",
+        "img4.webp", "img5.webp", "img6.webp", "imghouse.webp", "imgjardin.webp",
+        "foto20.jpg", "foto21.jpg", "foto22.jpg",
+    ];
 
+    const galleryContainer = document.querySelector('.galery .row');
+    if (!galleryContainer) return;
 
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
+    // Limpiar y crear columnas
+    galleryContainer.innerHTML = '';
+    const columns = 4;
+    
+    for (let i = 0; i < columns; i++) {
+        const column = document.createElement('div');
+        column.className = 'column';
+        galleryContainer.appendChild(column);
+    }
 
-// Declare a loop variable
-var i;
+    // Distribuir imágenes
+    const columnElements = galleryContainer.querySelectorAll('.column');
+    images.forEach((image, index) => {
+        const columnIndex = index % columns;
+        const img = document.createElement('img');
+        img.src = `./images/pryimg/${image}`;
+        img.alt = "SuperMario's";
+        columnElements[columnIndex].appendChild(img);
+    });
+}
 
-// Full-width images
+// ========== VISTA DE COLUMNAS ==========
 function one() {
-    for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "100%";  // IE10
-    elements[i].style.flex = "100%";
-  }
+    document.querySelectorAll('.column').forEach(col => {
+        col.style.flex = "100%";
+    });
 }
 
-// Two images side by side
 function two() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "50%";  // IE10
-    elements[i].style.flex = "50%";
-  }
+    document.querySelectorAll('.column').forEach(col => {
+        col.style.flex = "50%";
+    });
 }
 
-// Four images side by side
 function three() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "33.33%";  // IE10
-    elements[i].style.flex = "33.33%";
-  }
+    document.querySelectorAll('.column').forEach(col => {
+        col.style.flex = "33.33%";
+    });
 }
+
+// ========== INICIALIZACIÓN ==========
+document.addEventListener("DOMContentLoaded", () => {
+    resetTimeAnimation();
+    changeScreen('Screen1'); // Mostrar pantalla inicial
+    
+    // Configurar eventos para los botones de vista
+    document.querySelector('.btn[onclick="one()"]').addEventListener('click', one);
+    document.querySelector('.btn[onclick="two()"]').addEventListener('click', two);
+    document.querySelector('.btn[onclick="three()"]').addEventListener('click', three);
+});

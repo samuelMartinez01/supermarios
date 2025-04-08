@@ -238,7 +238,6 @@
                 allowfullscreen="true" 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
-
             <div id="Screen4" class="galery">
                 <div class="headergalery" id="myHeader">
                     <button class="btnBack" onclick="changeScreen('Screen1')">Back</button>
@@ -246,37 +245,12 @@
                     <button class="btn" onclick="one()">1</button>
                     <button class="btn active" onclick="two()">2</button>
                     <button class="btn" onclick="three()">3</button>
-                  </div>
-                <div class="row">
-                    <div class="column">
-                      <img src="./images/pryimg/image.webp">
-                      <img src="./images/pryimg/image-4.webp">
-                      <img src="./images/pryimg/img1.webp">
-                      <img src="./images/imghouse.webp">
-                    </div>
-                    <div class="column">
-                        <img src="./images/pryimg/image-1.webp">
-                        <img src="./images/pryimg/image-3.webp">
-                        <img src="./images/pryimg/img2.webp">
-                        <img src="./images/imgjardin.webp">
-                        <img src="./images/pryimg/img6.webp">
-                    </div>
-                    <div class="column">
-                        <img src="./images/pryimg/image-2.webp">
-                        <img src="./images/pryimg/image-13.webp">
-                        <img src="./images/pryimg/image-15.webp">
-                        <img src="./images/pryimg/img4.webp">
-                    </div>
-                    <div class="column">
-                        <img src="./images/pryimg/image-12.webp">
-                        <img src="./images/pryimg/image-14.webp">
-                        <img src="./images/pryimg/img3.webp">
-                        <img src="./images/pryimg/img5.webp">
-                    </div>
-    
-                  </div>
-            </div>
-            
+                </div>
+                <!-- Contenedor dinámico para las imágenes -->
+                <div class="row" id="galleryContainer">
+                    <!-- Las imágenes se cargarán aquí mediante JavaScript -->
+                </div>
+            </div>            
         </main>
         <footer>
             <p>&copy; 2025 Super Mario's Handyman</p>
